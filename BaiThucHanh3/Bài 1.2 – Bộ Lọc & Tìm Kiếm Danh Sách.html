@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Điểm Sinh Viên - K66</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .low-score { background-color: #fff3cd !important; } /* Màu vàng cho điểm < 5 */
+        th.sortable { cursor: pointer; user-select: none; }
+        th.sortable:hover { background-color: #f8f9fa; }
+    </style>
+</head>
+<body class="bg-light p-4">
+
+<div class="container bg-white p-4 shadow-sm rounded">
+    <h2 class="text-center mb-4">QUẢN LÝ ĐIỂM SINH VIÊN</h2>
+
+    <div class="row g-3 mb-4 border-bottom pb-4">
+        <div class="col-md-5">
+            <input type="text" id="txtName" class="form-control" placeholder="Họ tên sinh viên">
+        </div>
+        <div class="col-md-4">
+            <input type="number" id="txtScore" class="form-control" placeholder="Điểm (0-10)" min="0" max="10" step="0.1">
+        </div>
+        <div class="col-md-3">
+            <button id="btnAdd" class="btn btn-primary w-100">Thêm Sinh Viên</button>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <input type="text" id="searchName" class="form-control" placeholder="🔍 Tìm kiếm theo tên...">
+        </div>
+        <div class="col-md-6">
+            <select id="filterRank" class="form-select">
+                <option value="all"> Tất cả Xếp loại </option>
+                <option value="Giỏi">Giỏi (≥ 8.5)</option>
+                <option value="Khá">Khá (≥ 7.0)</option>
+                <option value="Trung bình">Trung bình (≥ 5.0)</option>
+                <option value="Yếu">Yếu (< 5.0)</option>
+            </select>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th id="sortScore" class="sortable">Điểm <span id="sortIcon">↕</span></th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="studentBody">
+            </tbody>
+    </table>
+
+    <div class="alert alert-info d-flex justify-content-between">
+        <span>Tổng số sinh viên: <strong id="totalStudents">0</strong></span>
+        <span>Điểm trung bình lớp: <strong id="avgScore">0.0</strong></span>
+    </div>
+</div>
+
+<script src="Bài 1.2 – Bộ Lọc & Tìm Kiếm Danh Sách.js"></script>
+</body>
+</html>

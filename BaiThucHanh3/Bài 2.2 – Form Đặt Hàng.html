@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đặt Hàng Đơn Giản</title>
+</head>
+<body>
+
+    <h2>Đặt Hàng</h2>
+
+    <form id="orderForm">
+        <label>Sản phẩm</label>
+        <select id="product">
+            <option value="">-- Chọn sản phẩm --</option>
+            <option value="Áo">Áo (150k)</option>
+            <option value="Quần">Quần (200k)</option>
+            <option value="Giày">Giày (500k)</option>
+        </select>
+        <span id="productError" class="error"></span>
+
+        <label>Số lượng</label>
+        <input type="number" id="quantity" placeholder="1 - 99">
+        <span id="quantityError" class="error"></span>
+
+        <label>Ngày giao hàng</label>
+        <input type="date" id="date">
+        <span id="dateError" class="error"></span>
+
+        <label>Địa chỉ giao hàng</label>
+        <input type="text" id="address" placeholder="Ít nhất 10 ký tự">
+        <span id="addressError" class="error"></span>
+
+        <label>Ghi chú</label>
+        <textarea id="note"></textarea>
+        <div class="counter" id="noteCounter">0/200</div>
+        <span id="noteError" class="error"></span>
+
+        <p>Phương thức thanh toán</p>
+        <label><input type="radio" name="payment" value="COD"> COD</label>
+        <label><input type="radio" name="payment" value="Bank"> Chuyển khoản</label>
+        <label><input type="radio" name="payment" value="Wallet"> Ví điện tử</label>
+        <span id="paymentError" class="error"></span>
+
+        <p><b>Tổng tiền: </b><span id="total">0</span> VNĐ</p>
+
+        <button type="submit">Đặt hàng</button>
+    </form>
+
+    <div id="summary"></div>
+    <div id="success" class="success"></div>
+
+    <script src="Bài 2.2 – Form Đặt Hàng.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Multi Step Form</title>
+
+<style>
+
+body{
+font-family:Arial;
+width:420px;
+margin:40px auto;
+}
+
+.step{
+display:none;
+}
+
+.step.active{
+display:block;
+}
+
+input{
+width:100%;
+padding:7px;
+margin-top:6px;
+}
+
+button{
+padding:8px 16px;
+margin-top:10px;
+margin-right:5px;
+cursor:pointer;
+}
+
+.error{
+color:red;
+font-size:13px;
+margin-top:3px;
+}
+
+.progress{
+width:100%;
+height:10px;
+background:#ddd;
+margin-bottom:10px;
+}
+
+.progress-bar{
+height:10px;
+width:33%;
+background:green;
+}
+
+.step-text{
+margin-bottom:20px;
+font-size:14px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Đăng ký tài khoản</h2>
+
+<div class="progress">
+<div id="progressBar" class="progress-bar"></div>
+</div>
+
+<div id="stepText" class="step-text">
+Bước 1 / 3
+</div>
+
+<form id="form">
+
+<!-- STEP 1 -->
+
+<div class="step active">
+
+<h3>Thông tin cá nhân</h3>
+
+<label>Họ tên</label>
+<input type="text" id="fullname">
+<div class="error" id="nameError"></div>
+
+<label>Ngày sinh</label>
+<input type="date" id="birthday">
+<div class="error" id="birthError"></div>
+
+<p>Giới tính</p>
+
+<label><input type="radio" name="gender" value="Nam"> Nam</label>
+<label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+
+<div class="error" id="genderError"></div>
+
+<button type="button" id="next1">Tiếp theo</button>
+
+</div>
+
+<!-- STEP 2 -->
+
+<div class="step">
+
+<h3>Thông tin tài khoản</h3>
+
+<label>Email</label>
+<input type="text" id="email">
+<div class="error" id="emailError"></div>
+
+<label>Mật khẩu</label>
+<input type="password" id="password">
+<div class="error" id="passError"></div>
+
+<label>Xác nhận mật khẩu</label>
+<input type="password" id="confirm">
+<div class="error" id="confirmError"></div>
+
+<button type="button" id="back1">Quay lại</button>
+<button type="button" id="next2">Tiếp theo</button>
+
+</div>
+
+<!-- STEP 3 -->
+
+<div class="step">
+
+<h3>Xác nhận thông tin</h3>
+
+<div id="result"></div>
+
+<br>
+
+<button type="button" id="back2">Quay lại</button>
+<button type="submit">Hoàn tất</button>
+
+</div>
+
+</form>
+
+<script src="BTVN Bài 2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bảng Điểm Sinh Viên</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+input{
+    padding:6px;
+    margin-right:10px;
+}
+
+button{
+    padding:6px 12px;
+    cursor:pointer;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top:20px;
+    width:600px;
+}
+
+th, td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#f2f2f2;
+}
+
+.weak{
+    background:yellow;
+}
+
+.stat{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Quản lý điểm sinh viên</h2>
+
+<input id="name" type="text" placeholder="Họ tên">
+<input id="score" type="number" placeholder="Điểm (0-10)">
+<button id="addBtn">Thêm</button>
+
+<table>
+
+<thead>
+<tr>
+<th>STT</th>
+<th>Họ tên</th>
+<th>Điểm</th>
+<th>Xếp loại</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+<div class="stat">
+Tổng sinh viên: <span id="total">0</span> |
+Điểm trung bình: <span id="avg">0</span>
+</div>
+
+<script src="Bài 1.1 – Bảng Điểm Sinh Viên.js"></script>
+
+</body>
+</html>
